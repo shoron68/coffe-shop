@@ -8,8 +8,6 @@ const CustomTracker = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       setCoords({ x: e.clientX, y: e.clientY });
-
-      // Check if the element under the mouse is clickable
       const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
 
       if (
@@ -36,9 +34,9 @@ const CustomTracker = () => {
       }}
       className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-300 ease-out"
     >
-      <div className="h-5 w-5 border mt-[50px] border-white rounded-full relative flex items-center justify-center">
+      <div className="h-5 w-5 border mt-[50px] border-[#F9C06A] rounded-full relative flex items-center justify-center">
         {showText && (
-          <span className="absolute top-full mt-1 text-xs text-white font-Playfair px-2 py-[1px] rounded">
+          <span className="absolute top-full mt-1 text-xs text-[#F9C06A] font-Playfair px-2 py-[1px] rounded">
             Click
           </span>
         )}
