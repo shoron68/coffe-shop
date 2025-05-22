@@ -11,7 +11,7 @@ const Feedback = () => {
     function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div data-aos="fade-left" className={`absolute top-[50%] -translate-y-1/2 text-[30px] p-[20px] rounded-[5px] bg-[#F9C06A] right-[242px] cursor-pointer z-50`} style={{ ...style  }} onClick={onClick}>
+    <div data-aos="fade-up" className={`absolute top-[50%] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] lg:right-[242px] right-[-20px] cursor-pointer z-50`} style={{ ...style  }} onClick={onClick}>
             <GrFormNextLink/>
     </div>
   );
@@ -20,7 +20,7 @@ const Feedback = () => {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div data-aos="fade-right" className={`absolute top-[50%] left-[240px] -translate-y-1/2 text-[30px] p-[20px] rounded-[5px] bg-[#F9C06A] z-50 cursor-pointer`} style={{ ...style}} onClick={onClick}>
+    <div data-aos="fade-up" className={`absolute top-[50%] lg:left-[240px] left-[-20px] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] z-50 cursor-pointer`} style={{ ...style}} onClick={onClick}>
         <GrFormPreviousLink/>
     </div>
   );
@@ -53,25 +53,27 @@ function SamplePrevArrow(props) {
     ];
 
     return (
-        <div className='py-[82px]'>
+        <div className='lg:py-[82px] lg:mx-0 mx-[30px]'>
             <Container>
                 <div className="text-center">
-                    <h4 data-aos="fade-up" className='text-[54px] text-[#603809] font-Playfair font-bold'>Our coffee perfection feedback</h4>
-                    <p data-aos="fade-up"  className='text-[20px] text-[#707070] font-Playfair'>Our customers have amazing things to say about us</p>
+                    <h4 data-aos="fade-up" className='lg:text-[54px] text-[33px] text-[#603809] font-Playfair font-bold'>Our coffee perfection feedback</h4>
+                    <p data-aos="fade-up"  className='lg:text-[20px] text-[16px] text-[#707070] font-Playfair'>Our customers have amazing things to say about us</p>
                 </div>
                 <div className="slider-container">
-                <Slider {...settings}   className="mt-[50px]">
+                <Slider {...settings}   className="mt-[50px] lg:mx-0 mx-[30px]">
                     {testimonials.map((testimonial, index) => (
                         <div data-aos="fade-up" key={index}>
-                            <div className="w-[980px] h-[524px] mx-auto bg-[#FFF9F1] border-[#F9C06A] border-[1px] relative">
-                                <div className="mt-[54px] ml-[29px]">
+                            <div className="lg:w-[980px] w-full lg:h-[524px] mx-auto bg-[#FFF9F1] border-[#F9C06A] border-[1px] relative">
+                                <div className="lg:mt-[54px] mt-[20px] ml-[29px]">
                                     <img src={cottation} alt="quote" />
                                 </div>
-                                <div className="w-[780px] mx-auto mt-[20px]">
-                                    <p className='text-center text-[18px] font-Playfair font-semibold text-[#707070]'>{testimonial.text}</p>
+                                <div className="lg:w-[780px] mx-auto mt-[20px] ">
+                                    <div className="lg:mx-0 mx-[20px]">
+                                        <p className='text-center lg:text-[18px] text-[14px] font-Playfair font-semibold text-[#707070]'>{testimonial.text}</p>
+                                    </div>
                                     <div className="mt-[20px]">
-                                        <h4 className='text-[32px] text-[#603809] font-Playfair font-bold text-center'>{testimonial.name}</h4>
-                                        <p className='text-[20px] text-[#707070] font-Playfair text-center'>{testimonial.role}</p>
+                                        <h4 className='lg:text-[32px] text-[24px] text-[#603809] font-Playfair font-bold text-center'>{testimonial.name}</h4>
+                                        <p className='lg:text-[20px] text-[16px] text-[#707070] font-Playfair text-center'>{testimonial.role}</p>
                                     </div>
                                 </div>
                                 <div className="flex justify-center mt-[10px]">
