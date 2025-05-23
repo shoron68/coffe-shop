@@ -1,5 +1,6 @@
-import Hero from "./components/Hero"
-import Nav from "./components/Nav"
+import { useEffect, useState } from "react";
+import Hero from "./components/Hero";
+import Nav from "./components/Nav";
 import bannerImg from './assets/bannerimg.png';
 import CoffeStyle from "./components/CoffeStyle";
 import Discover from "./components/Discover";
@@ -12,26 +13,53 @@ import { MouseTrackerProvider } from '@devdogukan/mouse-tracker';
 import CustomTracker from "./components/CustomTracker";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind's md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const content = (
+    <>
+      <div
+        style={{
+          backgroundImage: `url(${bannerImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Nav />
+        <Hero />
+      </div>
+      <Discover />
+      <CoffeStyle />
+      <Different />
+      <AmazingMorning />
+      <Feedback />
+      <Footer />
+      <FooterB />
+    </>
+  );
 
   return (
     <>
-    <MouseTrackerProvider>
-<CustomTracker/>
-      <div style={{ backgroundImage: `url(${bannerImg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',}}>
-      <Nav />
-      <Hero />
-    </div>
-    <Discover/>
-    <CoffeStyle/>
-    <Different/>
-    <AmazingMorning/>
-    <Feedback/>
-    <Footer/>
-    <FooterB/>
-    </MouseTrackerProvider>
+      {!isMobile ? (
+        <MouseTrackerProvider>
+          <CustomTracker />
+          {content}
+        </MouseTrackerProvider>
+      ) : (
+        content
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
