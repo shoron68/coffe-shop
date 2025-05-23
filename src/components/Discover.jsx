@@ -38,15 +38,15 @@ const Discover = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+       
           <div data-aos="zoom-in" className="w-full max-w-[400px] lg:max-w-[500px]">
             <img src={cup} alt="Coffee Cup" className="w-full h-auto object-contain" />
           </div>
         </div>
       </Container>
 
-      {/* Background Overlay Image */}
-      <div className="absolute bottom-[-100px] lg:bottom-0 left-0 ">
+     
+      <div  data-aos="fade-right" data-aos-duration="200" className="absolute bottom-[-100px] lg:bottom-0 left-0 ">
         <img src={overlay} alt="Overlay" className="w-full h-auto object-cover" />
       </div>
     </div>

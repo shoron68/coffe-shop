@@ -10,3 +10,6 @@ li{
 a {
   @apply no-underline;
 }
+#root{
+  overflow: hidden;
+}

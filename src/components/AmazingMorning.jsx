@@ -7,7 +7,7 @@ const AmazingMorning = () => {
     <div className="my-[82px] bg-center bg-cover bg-[url(./assets/Group_61.png)]">
       <div className="py-[54px] lg:mx-0 mx-[30px]">
         <Container>
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="text-center md:text-left max-w-md md:max-w-[585px]">
               <h3
                 data-aos="fade-right"

@@ -8,8 +8,8 @@ import Container from './Container';
 
 const Different = () => {
   return (
-    <div className="py-[60px] md:py-[82px] relative lg:mx-0 mx-[30px]">
-      <div className="absolute top-[10px] right-0 z-0 lg:block hidden">
+    <div className="py-[60px] md:py-[82px] relative lg:mx-0 mx-[30px] overflow-hidden">
+      <div data-aos="fade-left" data-aos-duration="200" className="absolute top-[10px] right-0 z-0 lg:block hidden">
         <img src={image} alt="Decor" />
       </div>
 

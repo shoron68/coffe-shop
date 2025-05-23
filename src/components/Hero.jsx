@@ -9,7 +9,7 @@ const Hero = () => {
       offset: 200,
       duration: 600,
       easing: 'ease-in-sine',
-      once: false,
+      once: true,
     });
 
     setTimeout(() => {
@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/your-background-image.jpg')` }}>
-      <Container className="py-[100px] md:py-[150px] lg:py-[189px] ">
+      <Container className="py-[100px] md:py-[150px] lg:py-[150px] ">
         <div className="lg:mx-0 mx-[30px]">
           <div className="max-w-full md:max-w-[527px] h-auto px-4 md:px-0">
           <h4
