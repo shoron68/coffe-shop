@@ -11,7 +11,7 @@ const Feedback = () => {
     function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div data-aos="fade-up" className={`absolute top-[50%] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] lg:right-[242px] right-[-20px] cursor-pointer z-50`} style={{ ...style  }} onClick={onClick}>
+    <div data-aos="fade-left" className={`absolute top-[50%] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] lg:right-[242px] right-[-20px] cursor-pointer z-50`} style={{ ...style  }} onClick={onClick}>
             <GrFormNextLink/>
     </div>
   );
@@ -20,7 +20,7 @@ const Feedback = () => {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div data-aos="fade-up" className={`absolute top-[50%] lg:left-[240px] left-[-20px] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] z-50 cursor-pointer`} style={{ ...style}} onClick={onClick}>
+    <div data-aos="fade-right" className={`absolute top-[50%] lg:left-[240px] left-[-20px] -translate-y-1/2 lg:text-[30px] text-[20px] lg:p-[20px] p-[10px] rounded-[5px] bg-[#F9C06A] z-50 cursor-pointer`} style={{ ...style}} onClick={onClick}>
         <GrFormPreviousLink/>
     </div>
   );

@@ -19,8 +19,9 @@ const Hero = () => {
 
   return (
     <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/your-background-image.jpg')` }}>
-      <Container className="py-[100px] md:py-[150px] lg:py-[189px] lg:mx-0 mx-[30px]">
-        <div className="max-w-full md:max-w-[527px] h-auto px-4 md:px-0">
+      <Container className="py-[100px] md:py-[150px] lg:py-[189px] ">
+        <div className="lg:mx-0 mx-[30px]">
+          <div className="max-w-full md:max-w-[527px] h-auto px-4 md:px-0">
           <h4
             data-aos="fade-right"
             className="text-[18px] lg:text-start text-center  sm:text-[20px] md:text-[22px] font-Playfair font-medium text-white"
@@ -53,6 +54,7 @@ const Hero = () => {
               Order Now
             </a>
           </div>
+        </div>
         </div>
       </Container>
     </div>
